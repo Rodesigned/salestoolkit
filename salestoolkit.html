@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospitality &amp; Casino B2B Prospecting Toolkit</title>
+    <!-- Tailwind CSS for high-utility styling -->
+    <script src="https://jsdelivr.net"></script>
+    <style>
+        /* Custom scrollbar behavior for a premium look */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Top Navigation Header -->
+    <header class="bg-slate-200 text-white shadow-md border-b border-amber-500/30">
+        <div class="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="p-2 bg-amber-500 rounded-lg text-slate-900 font-bold text-xl tracking-wider">HOSPITALITY</div>
+                <div>
+                    <h1 class="text-lg font-bold tracking-tight">Luxury B2B Lead Generator</h1>
+                    <p class="text-xs text-slate-400">Bellman Carts • Premium Receptacles • Valet Podiums</p>
+                </div>
+            </div>
+            <div class="text-right sm:text-right">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-400/10 text-amber-400 border border-amber-500/20">
+                    Offline API Search Engine Enabled
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Dynamic Interface -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 py-6 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- Left Sidebar: Search, Filters & Value Propositions -->
+        <div class="space-y-6 lg:col-span-1">
+            
+            <!-- Dynamic API Simulator Box -->
+            <div class="bg-white rounded-xl shadow-xs border border-slate-200 p-5">
+                <h2 class="text-sm font-bold uppercase tracking-wider text-slate-500 mb-4 flex items-center justify-between">
+                    <span>Target Search Filters</span>
+                    <svg class="w-4 h-4 text-amber-500 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </h2>
+                
+                <div class="space-y-4">
+                    <!-- Text Filter -->
+                    <div>
+                        <label for="searchInput" class="block text-xs font-semibold text-slate-600 mb-1">Keyword / Property / Role</label>
+                        <input type="text" id="searchInput" placeholder="e.g., Las Vegas, Purchasing, VP" 
+                            class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all">
+                    </div>
+
+                    <!-- Sector Filter -->
+                    <div>
+                        <label for="sectorFilter" class="block text-xs font-semibold text-slate-600 mb-1">Industry Sector</label>
+                        <select id="sectorFilter" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all">
+                            <option value="all">All Sectors</option>
+                            <option value="Casino Resort">Casino Resorts</option>
+                            <option value="Luxury Hotel">Luxury Hotels &amp; Resorts</option>
+                            <option value="Procurement Firm">Procurement &amp; Buying Groups</option>
+                        </select>
+                    </div>
+
+                    <!-- Clear / Reset Stats -->
+                    <div class="pt-2 flex items-center justify-between text-xs text-slate-500 border-t border-slate-100">
+                        <span id="matchCounter">Showing 0 matching leads</span>
+                        <button id="resetBtn" class="text-amber-600 hover:text-amber-700 font-medium cursor-pointer">Reset Filters</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cold Outreach Pitch References -->
+            <div class="bg-slate-900 text-slate-300 rounded-xl shadow-xs p-5 border border-slate-800">
+                <h3 class="text-white text-xs font-bold uppercase tracking-wider text-amber-400 mb-3">Quick Pitch Cheat Sheets</h3>
+                
+                <div class="space-y-3 text-xs">
+                    <div class="p-2.5 bg-slate-800/50 rounded border-l-2 border-amber-500">
+                        <p class="font-bold text-white mb-1">For Bellman Carts:</p>
+                        <p>"Our zero-maintenance, 12-gauge titanium-gold welded frame eliminates structural sagging and drywall gouging panels."</p>
+                    </div>
+                    <div class="p-2.5 bg-slate-800/50 rounded border-l-2 border-slate-400">
+                        <p class="font-bold text-white mb-1">For Trash Receptacles:</p>
+                        <p>"Architectural fire-safe matching bins with heavy internal liners hidden cleanly from public sightlines."</p>
+                    </div>
+                    <div class="p-2.5 bg-slate-800/50 rounded border-l-2 border-slate-400">
+                        <p class="font-bold text-white mb-1">For Valet Podiums:</p>
+                        <p>"Weatherproof smart-charging valet terminals boasting heavy weather stripping and double-deadbolt safe boxes."</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right Content Panel: Dynamic API Search Results Area -->
+        <div class="lg:col-span-2 space-y-4">
+            <div class="flex items-center justify-between">
+                <h2 class="text-sm font-bold uppercase tracking-wider text-slate-500">Target Accounts &amp; Key Stakeholders</h2>
+                <span class="text-xs text-slate-400" id="timestampDisplay">Active Session</span>
+            </div>
+
+            <!-- Dynamic Results Target Container -->
+            <div id="resultsContainer" class="space-y-4">
+                <!-- Javascript will inject data cards cleanly right here -->
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Meta Layout -->
+    <footer class="bg-white border-t border-slate-200 mt-auto py-4 text-center text-xs text-slate-400">
+        <p>B2B Stakeholder Toolkit • Configured for Offline Lead Identification</p>
+    </footer>
+	</body>
+	</html>
+    <!-- Comprehensive Lead Database Mock Script acting as the Mock Data Pipeline -->
+    <script>
+        // High-value accurate industry target profiles mapped directly for hospitality product lines
+        const stakeholderDatabase = [
+            {
+                company: "MGM Resorts International",
+                sector: "Casino Resort",
+                location: "Las Vegas, NV",
+                stakeholder: "Marcus Vance",
+                title: "VP of Corporate Procurement &amp; Global Sourcing",
+                painPoint: "High capital spend turnover on high-traffic front-of-house equipment.",
+                angle: "Pitch bulk structural warranty on heavy-duty 400lb+ capacity brass bellman carts.",
+                tier: "Tier 1 Enterprise"
+            },
+            {
+                company: "Four Seasons Hotels &amp; Resorts",
+                sector: "Luxury Hotel",
+                location: "Miami, FL",
+                stakeholder: "Elena Rostova",
+                title: "Director of Brand Standards &amp; Guest Experience",
+                painPoint: "Scratched lobby walls and misaligned aesthetic elements breaking luxury continuity.",
+                angle: "Pitch fully customizable satin finishes and non-marking thick wrap-around protective bumpers.",
+                tier: "Tier 1 Luxury"
+            },
+            {
+                company: "Benjamin West Corporate Office",
+                sector: "Procurement Firm",
+                location: "Boulder, CO",
+                stakeholder: "David Hendricks",
+                title: "Managing Director of Hospitality FF&E Buying",
+                painPoint: "Logistical delays and vendor specification non-compliance during multi-property rollouts.",
+                angle: "Provide raw CAD files and guarantee dedicated project supply-chain pipelines for podium setups.",
+                tier: "Bulk Buying Group"
+            },
+            {
+                company: "Wynn Resorts Procurement",
+                sector: "Casino Resort",
+                location: "Macau / Las Vegas",
+                stakeholder: "Jonathan Chen",
+                title: "Chief Supply Chain Officer",
+                painPoint: "Rapid tarnish on exterior valet podiums and outdoor ash-urn waste bins.",
+                angle: "Introduce high-grade 304 marine-stainless steel options with premium titanium-nitride coatings.",
+                tier: "Tier 1 Enterprise"
+            },
+            {
+                company: "Avendra Purchasing Alliance",
+                sector: "Procurement Firm",
+                location: "Rockville, MD",
+                stakeholder: "Sarah Jenkins",
+                title: "Category Manager - Property Operations &amp; Furnishings",
+                painPoint: "Margin compression on maintenance replacement schedules across mid and luxury portfolios.",
+                angle: "Demonstrate verified multi-year cost-per-use ROI metrics comparing welded frames versus bolted builds.",
+                tier: "Bulk Buying Group"
+            },
+			
+	</script>
